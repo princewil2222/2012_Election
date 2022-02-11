@@ -1,11 +1,11 @@
 const express =require('express');
 const path = require('path');
-const dotenv = require('dotenv')
-const connectDB = require('./config/db');
+// const dotenv = require('dotenv')
+// const connectDB = require('./config/db');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-dotenv.config('.env')
+// dotenv.config('.env')
 
 // Db config
 // require('./config/db');
@@ -13,10 +13,10 @@ dotenv.config('.env')
 
 
 const app = express();
-connectDB();
+// connectDB();
 
 
-const poll = require('./routes/poll');
+// const poll = require('./routes/poll');
 
 // set public folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Enable Cors
 app.use(cors());
 
-app.use('/poll', poll)
+// app.use('/poll', poll)
 
 app.use('/', router)
 
