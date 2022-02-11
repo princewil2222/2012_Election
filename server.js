@@ -1,15 +1,20 @@
 const express =require('express');
 const path = require('path');
+const dotenv = require('dotenv')
+const connectDB = require('./config/db');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+dotenv.config('.env')
 
 // Db config
-require('./config/db');
+// require('./config/db');
+
 
 
 const app = express();
+connectDB();
+
 
 const poll = require('./routes/poll');
 
