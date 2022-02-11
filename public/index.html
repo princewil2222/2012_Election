@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <title>Election poll</title>
+</head>
+<body>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous">
+            </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://js.pusher.com/7.0.3/pusher.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            // var chart = new CanvasJS.Chart("chartContainer", {
+            //     title:{
+            //         text: "My First Chart in CanvasJS"              
+            //     },
+            //     data: [              
+            //     {
+            //         // Change type to "doughnut", "line", "splineArea", etc.
+            //         type: "column",
+            //         dataPoints: [
+            //             { label: "apple",  y: 10  },
+            //             { label: "orange", y: 15  },
+            //             { label: "banana", y: 25  },
+            //             { label: "mango",  y: 30  },
+            //             { label: "grape",  y: 28  }
+            //         ]
+            //     }
+            //     ]
+            // });
+            // chart.render();
+         }
+
+    //     let dataPoints = [
+    // {label: 'Prince Nome', y:0},
+    // {label: 'Chigozie Egbuaba', y:0},
+    // {label: 'Nonso Ogbu', y:0},
+    // {label: 'Ifeanyi Ejiofobiri', y:0},
+    
+// ];
+
+// const chartConstainer = document.querySelector('#chartContainer');
+
+// if(chartConstainer){
+    // var chart = new CanvasJS.Chart('chartContainer',{
+    //     // animationEnabled: true,
+    //     // theme: 'theme1',
+    //     title: {text: 'President Results'},
+    //     data: [
+    //         {
+    //             type: 'column',
+    //             dataPoints:dataPoints
+    //         }
+    //     ]
+    // });
+    // chart.render();
+// }
+        </script>
+
+
+    <!-- <script src="/public/main.js"></script> -->
+
+
+<div>
+    <h2>ST JOESEPH SECONDARY SCHOOL OKOFIA OTOLO NNEWI</h2>
+    <h2>2012 SET ONLINE ELECTION POLL</h2>
+
+    <p>Vote for your desired candidate for the following offices</p>
+
+    <form id="vote-form">
+        <p>
+            <input type="radio" name="president" id="prince" value="Prince_Nome">
+            <label for="prince">Nome Prince</label>
+        </p>
+
+        <p>
+            <input type="radio" name="president" id="chigozie" value="Chigozie_Egbuaba">
+            <label for="chigozie">Chigozie Egbuaba</label>
+        </p>
+
+        <p>
+            <input type="radio" name="president" id="nonso" value="Nonso_Ogbu">
+            <label for="nonso">Nonso Ogbu</label>
+        </p>
+
+        <p>
+            <input type="radio" name="president" id="ifeanyi" value="Ifeanyi_Ejiofobiri">
+            <label for="ifeanyi">Ifeanyi Ejiofobiri</label>
+        </p>
+        <input type="submit" value="Vote" class="btn">
+    </form>
+    <br><br>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
