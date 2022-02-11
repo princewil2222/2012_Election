@@ -5,6 +5,7 @@ form.addEventListener('submit', (e) =>{
     const choice = document.querySelector('input[name=president]:checked').value;
         const data = {president: choice};
 
+    // fetch('http://localhost:3000/poll',{
     fetch('https://glacial-reaches-33160.herokuapp.com/poll',{
         method:'post',
         body: JSON.stringify(data),
@@ -21,7 +22,7 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
 });
-
+// fetch('http://localhost:3000/poll').then(res => res.json())
 fetch('https://glacial-reaches-33160.herokuapp.com/poll').then(res => res.json())
 .then(data => {
     const votes = data.votes;

@@ -1,0 +1,96 @@
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    line-height: 1.428;
+    color: #333;
+    background-color: #89949E;
+    margin: 0;
+}
+h2{
+    background: #0b2f5f;
+    background: -webkit-linear-gradient(top,#0b2f5f 0%,#103d6b 100%);
+    color: #ccc6c6;
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    text-shadow: 1px salmon;
+    box-shadow: 1px #333 ;
+}
+
+.vote{
+    color: black;
+    font-size: 21px;
+    margin-left: 10px;
+    font-weight: 500;
+
+}
+#vote-box{
+    border: 0;
+    z-index: 1020;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.vote-conatiner{
+    border-color: #222222;
+    border: 1px solid transparent;
+    box-shadow: #222222;
+    width: 100%;
+    height: fit-content;
+}
+
+.vote-form{
+    font-size: 19px;
+    margin: 5px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 1em ;
+    font-weight: 500;
+
+}
+
+.vote-form h3{
+    text-align: center;
+    font-size: medium;
+    background-color: rgb(142, 209, 211);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-radius: 1em 1em 0 0;
+}
+
+.president{
+    background-color: rgb(78, 149, 158);
+    background: -webkit-linear-gradient(top, rgb(78, 149, 158) 0%, rgb(78, 149, 158) 100%);
+}
+
+.vpresident{
+    background-color: rgb(209, 118, 85);
+}
+.sec{
+    background-color: rgb(206, 125, 203);
+}
+.fsec{
+    background-color: rgb(113, 187, 113);
+}
+.pro{
+    background-color: rgb(189, 95, 126);
+}
+.btn{
+    font-size: 18px;
+    width: 6em;
+    background-color: #0b2f5f;
+    color: aliceblue;
+    border-radius: 50%;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+
