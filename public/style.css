@@ -1,4 +1,4 @@
-*{
+ *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -28,48 +28,51 @@ h2{
     margin-left: 10px;
     font-weight: 500;
 
-}
-#vote-box{
+} 
+ #vote-box{
     border: 0;
     z-index: 1020;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-}
-.vote-conatiner{
+    /* display: flex;
+    justify-content: space-between; */
+ }  
+ #vote-box1{
+    border: 0;
+    z-index: 1020;
+    top: 0;
+ }
+ .vote-container{
     border-color: #222222;
     border: 1px solid transparent;
     box-shadow: #222222;
-    width: 100%;
     height: fit-content;
-}
+} 
 
-.vote-form{
-    font-size: 19px;
-    margin: 5px;
+ .vote-form{
+    font-size: 16px;
     border: 2px solid black;
     box-sizing: border-box;
-    width: 100%;
     border-radius: 1em ;
     font-weight: 500;
 
-}
+} 
 
-.vote-form h3{
+ .vote-form h3{
     text-align: center;
     font-size: medium;
     background-color: rgb(142, 209, 211);
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 10px;
     border-radius: 1em 1em 0 0;
-}
+    width: 100%;
+} 
 
 .president{
     background-color: rgb(78, 149, 158);
     background: -webkit-linear-gradient(top, rgb(78, 149, 158) 0%, rgb(78, 149, 158) 100%);
-}
+} 
 
-.vpresident{
+ .vpresident{
     background-color: rgb(209, 118, 85);
 }
 .sec{
@@ -81,6 +84,10 @@ h2{
 .pro{
     background-color: rgb(189, 95, 126);
 }
+.but{
+    display: flex;
+    justify-content: center;
+}
 .btn{
     font-size: 18px;
     width: 6em;
@@ -88,9 +95,6 @@ h2{
     color: aliceblue;
     border-radius: 50%;
     cursor: default;
-    display: flex;
-    justify-content: center;
-    margin-left: 70px;
 }
-
+ 
 

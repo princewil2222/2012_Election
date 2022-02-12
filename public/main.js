@@ -35,7 +35,7 @@ fetch('https://glacial-reaches-33160.herokuapp.com/poll').then(res => res.json()
         {label: 'Prince_Nome', y:voteCounts.Prince_Nome},
         {label: 'Chigozie_Egbuaba', y:voteCounts.Chigozie_Egbuaba},
         {label: 'Nonso_Ogbu', y:voteCounts.Nonso_Ogbu},
-        {label: 'Ifeanyi_Ejiofobiri', y:voteCounts.Ifeanyi_Ejiofobiri},
+        {label: 'Micheal_Unadike', y:voteCounts.Micheal_Unadike},
         
     ];
     
