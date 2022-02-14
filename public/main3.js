@@ -21,8 +21,8 @@ form3.addEventListener('submit', (e) =>{
     e.preventDefault();
 
 });
- fetch('http://localhost:3000/poll3').then(res => res.json())
-// fetch('https://glacial-reaches-33160.herokuapp.com/poll3').then(res => res.json())
+//  fetch('http://localhost:3000/poll3').then(res => res.json())
+fetch('https://glacial-reaches-33160.herokuapp.com/poll3').then(res => res.json())
 .then(data => {
     const votes = data.votes;
     const totalVotes = votes.lenght;
