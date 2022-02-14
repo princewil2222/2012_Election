@@ -1,12 +1,11 @@
+const form3 = document.getElementById('vote-form3');
 
-const form = document.getElementById('vote-form');
+form3.addEventListener('submit', (e) =>{
+    const choice = document.querySelector('input[name=fsec]:checked').value;
+        const data = {fsec: choice};
 
-form.addEventListener('submit', (e) =>{
-    const choice = document.querySelector('input[name=president]:checked').value;
-        const data = {president: choice};
-
-    // fetch('http://localhost:3000/poll',{
-    fetch('https://glacial-reaches-33160.herokuapp.com/poll',{
+    // fetch('http://localhost:3000/poll3',{
+    fetch('https://glacial-reaches-33160.herokuapp.com/poll3',{
         method:'post',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -22,31 +21,34 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
 });
-//  fetch('http://localhost:3000/poll').then(res => res.json())
- fetch('https://glacial-reaches-33160.herokuapp.com/poll').then(res => res.json())
+ fetch('http://localhost:3000/poll3').then(res => res.json())
+// fetch('https://glacial-reaches-33160.herokuapp.com/poll3').then(res => res.json())
 .then(data => {
     const votes = data.votes;
     const totalVotes = votes.lenght;
 
     // Count votes
-    const voteCounts = votes.reduce((acc, vote) => ((acc[vote.president] = (acc[vote.president] || 0) + parseInt(vote.points)), acc), {});
+    const voteCounts = votes.reduce((acc, vote) => ((acc[vote.fsec] = (acc[vote.fsec] || 0) + parseInt(vote.points)), acc), {});
     
     let dataPoints = [
-        {label: 'Prince_Nome', y:voteCounts.Prince_Nome},
-        {label: 'Chigozie_Egbuaba', y:voteCounts.Chigozie_Egbuaba},
-        {label: 'Nonso_Ogbu', y:voteCounts.Nonso_Ogbu},
-        {label: 'Micheal_Unadike', y:voteCounts.Micheal_Unadike},
+        {label: 'Stanley_Ugwu', y:voteCounts.Stanley_Ugwu},
+        {label: 'Oluchukwu_Obi', y:voteCounts.Oluchukwu_Obi},
+        {label: 'Chioma_Obi', y:voteCounts.Chioma_Obi},
+        {label: 'Oluchukwu_Nnodu', y:voteCounts.Oluchukwu_Nnodu},
         
     ];
     
-    const chartContainer = document.querySelector('#chartContainer');
+    
+    
+    
+    const chartContainer = document.querySelector('#chartContainer3');
     
     if(chartContainer){
-    var chart = new CanvasJS.Chart("chartContainer", {
+    var chart = new CanvasJS.Chart("chartContainer3", {
             animationEnabled: true,
             theme: 'theme1',
             title: {
-                text: `Total Votes  For President ${totalVotes}`        
+                text: `Total Votes For FinSec ${totalVotes}`        
         },
         data: [              
         {
@@ -66,10 +68,10 @@ form.addEventListener('submit', (e) =>{
       encrypted: true
     });
     
-    var channel = pusher.subscribe('2012-set-poll');
-    channel.bind('2012-set-vote', function(data) {
+    var channel = pusher.subscribe('2012-set-poll3');
+    channel.bind('2012-set-vote3', function(data) {
       dataPoints = dataPoints.map(x =>{
-          if(x.label == data.president) {
+          if(x.label == data.fsec) {
               x.y += data.points;
               return x;
     
@@ -84,8 +86,3 @@ form.addEventListener('submit', (e) =>{
  
 
 });
-
-
-
-
-    

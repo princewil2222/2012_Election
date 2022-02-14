@@ -2,7 +2,7 @@ const mongoose =require('mongoose');
 const Schema = mongoose.Schema;
 
 const VoteSchema = new Schema({
-    president:{
+    pro:{
         type: String,
         required: true
     },
@@ -15,6 +15,6 @@ const VoteSchema = new Schema({
 
 
 // Create collection and add Schema
-const Vote = mongoose.model('Vote', VoteSchema);
+const Vote = mongoose.model('Vote4', VoteSchema);
 
 module.exports = Vote;
